@@ -1,0 +1,38 @@
+<div class="container">
+    <h1>Crear Producto</h1>
+    <div class="row">
+        <div class="col-4">
+            <input type="text" placeholder="Nombre"
+            class="form-control rounded-pill border-0 shadow-sm px-4"
+            [(ngModel)]="producto.nombre">
+        </div>
+        <div class="col-4">
+            <input type="text" placeholder="Precio"
+            class="form-control rounded-pill border-0 shadow-sm px-4"
+            [(ngModel)]="producto.precio">
+        </div>
+        <div class="col-4">
+            <input type="file" id="imagen" (change)="onUploadChange($event)" accept=".jpg"/> 
+        </div>
+    </div>
+    <p></p>
+    <div class="row">
+        <button type="submit"
+                                class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" (click)="ingresarProducto()">Ingresar</button>
+    </div>
+    <h1>Productos</h1>
+    <div class="row">
+        <ng-container *ngFor="let p of productos">
+            <div class="col-3">
+                <div class="card">
+                    
+                    <img [src]="p.img" class="card-img-top" alt="Producto">
+                    <div class="card-body">
+                      <h5 class="card-title">{{ p.nombre }}</h5>
+                      <p class="card-text">Q.{{ p.precio }}</p>
+                    </div>
+                  </div>
+            </div>
+        </ng-container>
+    </div>
+</div>

@@ -1,5 +1,6 @@
 #Imports
 from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 
 #Variables globales
 usuarios = [
@@ -18,6 +19,8 @@ productos = []
 
 #Instancia de flask con el nombre de la variable especial __name__ del modulo
 app = Flask(__name__)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/')
 def status():
