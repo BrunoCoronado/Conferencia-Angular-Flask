@@ -1,18 +1,1 @@
-<div class="container">
-    <h1>Productos</h1>
-    <div class="row">
-        <ng-container *ngFor="let p of productos">
-            <div class="col-3">
-                <div class="card">
-                    
-                    <img [src]="p.img" class="card-img-top" alt="Producto">
-                    <div class="card-body">
-                      <h5 class="card-title">{{ p.nombre }}</h5>
-                      <p class="card-text">Q.{{ p.precio }}</p>
-                      <a class="btn btn-primary" (click)="comprar()">Comprar</a>
-                    </div>
-                  </div>
-            </div>
-        </ng-container>
-    </div>
-</div>
+<app-productos></app-productos>
