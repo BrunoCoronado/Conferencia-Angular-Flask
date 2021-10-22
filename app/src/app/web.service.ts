@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class WebService {
 
   private PROTOCOLO = 'http://'
-  private HOST = 'localhost:5000'
+  private HOST = 'localhost:3000'
   private PATH_RAIZ = ''
 
   constructor(private http: HttpClient) { }

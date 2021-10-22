@@ -1,2 +1,4 @@
 API/venv/
 API/__pycache__/
+API-NODEJS/node_modules/
+assets/
